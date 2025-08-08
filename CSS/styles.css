@@ -1,37 +1,122 @@
 /* css/styles.css */
 body {
-  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #005792;
-  color: white;
-  padding: 20px;
+/* Top header bar like BIRL */
+
+/* Top header bar like BIRL */
+
+/* Clean White Header - Biotech Theme */
+
+/* ...existing code... */
+.top-bar {
+  background-color: #ffffff; /* White background */
+  color: #0072BC;            /* Blue text */
+  display: flex;
+  flex-direction: column;      /* Stack children vertically */
+  align-items: center;         /* Center horizontally */
+  justify-content: center;     /* Center vertically */
+  padding: 20px 0;
+  position: relative;
+  /*border-bottom: 3px solid #74B843;  Green accent line */
+ width: 100vw;                /* Full viewport width */
+  left: 50%;
+  transform: translateX(-50%); /* Center the bar */
+box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Soft shadow at bottom */
+  border-bottom: none;     /* Green accent line */
+}
+/* ...existing code... */
+
+.lab-logo {
+  position: absolute;
+  left: 20px;
+  height: 60px;
 }
 
+.top-bar h1 {
+  font-size: 26px;
+  font-weight: 600;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.top-bar h2 {
+    color: #74B843;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  border-bottom: 3px solid #74B843;
+  margin-bottom: 30px;
+}
+footer{
+  margin-top: 30px;
+  border-top: 3px solid #74B843
+}
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
 nav a {
-  color: white;
+  color: #005b9f;
   text-decoration: none;
 }
 
 .hero {
-  padding: 100px 20px;
-  text-align: center;
-  background-color: #eaf6f6;
+  padding: 0;
+  margin: 0;
+color: #ffffff; /* White background for hero section */
 }
 
-.btn {
-  background-color: #005792;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+.hero-image {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 500px; /* Adjust if you want taller */
 }
+
+
+
+
+.btn:hover {
+  background-color: #005b9f;
+}
+
+a {
+  color: #0072BC;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #74B843;
+  text-decoration: underline;
+}
+
+.contact-info {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    padding-left: 20px;
+  }
+h2.contact-info{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+  }
+
