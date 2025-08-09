@@ -8,28 +8,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<header>
-  <div class="top-bar">
-    <img src="images/siteIcon.png" alt="BIG Logo" class="lab-logo" />
-    <h1>Biotech Innovation Group (BIG)</h1>
-    <h2>Accelerating Excellence in Molecular and Cellular Biology Research</h2>
-  </div>
-
-  <!-- Hamburger Button -->
-  <button class="hamburger" id="hamburger">&#9776;</button>
-
-  <!-- Navigation Menu -->
-  <nav id="nav-menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="facilities.html">Facilities</a></li>
-      <li><a href="#contact-info">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <div id="header"></div>
   <section class="hero">
     
     <section class="hero">
@@ -37,41 +16,28 @@
     </section>
     
   </section>
+<div id="footer"></div>
+ <script>
+  // Load header and then attach event listeners
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
 
-  <footer id="contact-info">
-  <div class="footer-container">
-    <h2 class="contact-info">Contact Us</h2>
-    <div class="contact-grid">
-      <div class="contact-details">
-        <p class="contact-name">Amir Faisal, PhD</p>
-        <p class="contact-title">Associate Professor</p>
-        <p class="contact-email">
-          <a href="mailto:amir.faisal@lums.edu.pk">amir.faisal@lums.edu.pk</a><br>
-     
-          <a href="mailto:info@biotechig.com">info@biotechig.com</a>
-        </p>
-      </div>
-      
-      <div class="contact-address">
-        <p class="contact-address-title"><strong>Postal Address: </strong></p>
-        <p>Syed Babar Ali School of Science and Engineering (SBASSE),</p>
-        <p>Lahore University of Management Sciences (LUMS),</p>
-        <p>Opposite Sector U, D.H.A. Lahore Cantt. 54792</p>
-        <p>Lahore, Pakistan.</p>
-      </div>
-    </div>
-  </div>
-  <p class="copytag">&copy; 2025 Biotech Innovation Group. All rights reserved.</p>
-</footer>
-  <script >
-        document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+      // Attach hamburger toggle after header is inserted
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
-  });
-});
-  </script>
+      hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
 </body>
 </html>
