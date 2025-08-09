@@ -8,23 +8,27 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header><div class="top-bar">
-  <img src="images/siteIcon.png" alt="BIG Logo" class="lab-logo" />
-  <h1>Biotech Innovation Group (BIG)</h1>
-  <h2>Accelerating Excellence in Molecular and Cellular Biology Research</h2>
-</div>
+<header>
+  <div class="top-bar">
+    <img src="images/siteIcon.png" alt="BIG Logo" class="lab-logo" />
+    <h1>Biotech Innovation Group (BIG)</h1>
+    <h2>Accelerating Excellence in Molecular and Cellular Biology Research</h2>
+  </div>
 
-    <nav>
-     
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="#contact-info">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Hamburger Button -->
+  <button class="hamburger" id="hamburger">&#9776;</button>
+
+  <!-- Navigation Menu -->
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="#contact-info">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <section class="hero">
     
@@ -59,6 +63,15 @@
   </div>
   <p class="copytag">&copy; 2025 Biotech Innovation Group. All rights reserved.</p>
 </footer>
-  <script src="js/script.js"></script>
+  <script >
+        document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', function () {
+    navMenu.classList.toggle('show');
+  });
+});
+  </script>
 </body>
 </html>

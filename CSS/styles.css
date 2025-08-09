@@ -182,3 +182,86 @@ a:hover {
   color: #74B843;
   text-decoration: underline;
 }
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  .lab-logo {
+    position: static;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .top-bar h1 {
+    font-size: 20px;
+  }
+
+  .top-bar h2 {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Hamburger button style */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #0072BC;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Hide menu on mobile */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav.show {
+    display: block;
+  }
+}
