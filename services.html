@@ -4,62 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Services</title>
 </head>
 <body>
-      <div id="header"></div>
+    <div id="header"></div>
 
-<section class="services-section">
-  
-    <div class="services-column services-text">
-        <h2 class="services-title">Our Services (Wet lab)</h2>
-        <hr class="services-divider">
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-column services-text">
+            <h2 class="services-title">Our Services (Wet lab)</h2>
+            <hr class="services-divider">
 
-        <p class="services-intro">
-            To aid your drug discovery efforts, we offer the following cellular assays/experiments:
-        </p>
+            <p class="services-intro">
+                To aid your drug discovery efforts, we offer the following cellular assays/experiments:
+            </p>
 
-        <ul class="services-list">
-            <li>Proliferation assays (SRB, MTT, MTS, ADP Glo etc.) for drug evaluation (Screening, IC50s etc.)</li>
-            <li>Apoptotic assays (Annexin PI staining, PARP and caspase 3/7 cleavage)</li>
-            <li>Degradation assays for PROTACs</li>
-            <li>Immunofluorescence</li>
-            <li>3D growth of spheroids and colony formation</li>
-            <li>Western blotting</li>
-            <li>Drug combination studies</li>
-            <li>Gene expression analysis through q-PCR</li>
-        </ul>
-    </div>
-    <div class="services-column services-image">
-        <img src="images/wetlab1.png" alt="Wet lab experiment">
-    </div>
+            <ul class="services-list">
+                <li>Proliferation assays (SRB, MTT, MTS, ADP Glo etc.) for drug evaluation (Screening, IC50s etc.)</li>
+                <li>Apoptotic assays (Annexin PI staining, PARP and caspase 3/7 cleavage)</li>
+                <li>Degradation assays for PROTACs</li>
+                <li>Immunofluorescence</li>
+                <li>3D growth of spheroids and colony formation</li>
+                <li>Western blotting</li>
+                <li>Drug combination studies</li>
+                <li>Gene expression analysis through q-PCR</li>
+            </ul>
+        </div>
+        <div class="services-column services-image">
+            <img src="images/wetlab1.png" alt="Wet lab experiment">
+        </div>
+    </section>
 
-</section>
+    <!-- Slider Section -->
+    <section class="services-slider-section">
+        <h2 class="services-slider-title">Our Services</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="images/wetlab2.png" alt="Service 1">
+                <img src="images/insilico2.png" alt="Service 2">
+                <img src="images/insilico3.png" alt="Service 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
 
+    <div id="footer"></div>
 
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-menu');
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('show');
+                });
+            });
 
-      <div id="footer"></div>
- <script>
-  // Load header and then attach event listeners
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
+        // Load footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
 
-      // Attach hamburger toggle after header is inserted
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
+        // Slider functionality
+        const slides = document.querySelector('.slides');
+        const slideImages = document.querySelectorAll('.slides img');
+        let index = 0;
 
-      hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-      });
-    });
+        document.querySelector('.next').addEventListener('click', () => {
+            index = (index + 1) % slideImages.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        });
 
-  // Load footer
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
-</script>
-
+        document.querySelector('.prev').addEventListener('click', () => {
+            index = (index - 1 + slideImages.length) % slideImages.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        });
+    </script>
 </body>
 </html>

@@ -328,7 +328,7 @@ a:hover {
 }
 
 .lums-image img {
-  width: 100%;
+  width: 60%;
   height: auto; /* let height adapt */
   object-fit: cover;
   border-radius: 5px;
@@ -423,22 +423,25 @@ a:hover {
   }
 }
 /* services pages */
+/* Services Section */
 .services-section {
     display: flex;
-    align-items: stretch; /* Makes both columns equal height */
-    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
     padding: 50px 10%;
     flex-wrap: wrap;
 }
 
 .services-column {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .services-image img {
-    width: 75%;
-    height: 60%;
+    width: auto;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -469,13 +472,17 @@ a:hover {
     color: #333;
 }
 
-/* Responsive Design */
+/* Responsive for services section */
 @media (max-width: 992px) {
     .services-section {
         flex-direction: column;
+        align-items: center;
+        text-align: left;
         padding: 30px 5%;
     }
-
+    .services-image img {
+        max-width: 100%;
+    }
     .services-title {
         font-size: 1.8rem;
     }
@@ -484,5 +491,78 @@ a:hover {
 @media (max-width: 600px) {
     .services-title {
         font-size: 1.5rem;
+    }
+    .services-intro {
+        font-size: 1rem;
+    }
+}
+
+/* Slider Styles */
+.services-slider-section {
+    margin-top: 40px;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.services-slider-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive for slider */
+@media (max-width: 768px) {
+    .services-slider-title {
+        font-size: 1.5rem;
+    }
+    .prev, .next {
+        padding: 8px 12px;
+        font-size: 1.2rem;
     }
 }
