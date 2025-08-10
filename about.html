@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>About Us</title>
+</head>
+<body>
+      <div id="header"></div>
+<section class="mission-section">
+  <!-- Left Text Column -->
+  <div class="mission-text">
+    <h2 class="mission-title">
+      Our Mission
+      <img src="images/logo.png" alt="DNA Icon" class="mission-icon">
+    </h2>
+    <hr class="mission-divider">
+
+    <p class="mission-intro">
+      <strong><em>Biotech Innovation Group (BIG)</em></strong> is dedicated to pioneering
+      scientific research and driving innovation.
+    </p>
+
+    <p>
+      The company's origin stems from a vision of resourcefulness, initially specializing
+      in cell-based assays and developing computational solutions to support biological
+      research and diagnostics, within and beyond the borders of Pakistan. Additionally,
+      BIG is broadening its focus to include the production of essential biological molecules,
+      notably proteins, to lower operational expenses.
+    </p>
+
+    <p>
+      BIG aims to reflect its evolving expertise by fostering a culture of efficiency,
+      innovation, and sustainability.
+    </p>
+  </div>
+
+  <!-- Right Image Column -->
+  <div class="lums-image">
+    <img src="images/lums-building.png" alt="LUMS Building">
+  </div>
+</section>
+
+<section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <hr class="why-choose-divider">
+
+    <div class="choose-container">
+        <div class="choose-column">
+            <div class="choose-item">
+                <img src="images/team.png" alt="Experienced Team">
+                <span>Experienced team with diverse expertise</span>
+            </div>
+            <div class="choose-item">
+                <img src="images/cost.png" alt="Cost-effectiveness">
+                <span>Cost-effectiveness</span>
+            </div>
+            <div class="choose-item">
+                <img src="images/time.png" alt="Agility and Flexibility">
+                <span>Agility and Flexibility</span>
+            </div>
+        </div>
+
+        <div class="choose-column">
+            <div class="choose-item">
+                <img src="images/Quality.png" alt="Quality Data">
+                <span>Quality data and results</span>
+            </div>
+            <div class="choose-item">
+                <img src="images/communication.png" alt="Communication">
+                <span>Excellent communication & customer service</span>
+            </div>
+            <div class="choose-item">
+                <img src="images/environment.png" alt="Commitment">
+                <span>Commitment to environmental & social responsibility</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+      
+      <div id="footer"></div>
+ <script>
+  // Load header and then attach event listeners
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // Attach hamburger toggle after header is inserted
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

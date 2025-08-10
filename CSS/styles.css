@@ -41,7 +41,7 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Soft shadow at bottom */
 .top-bar h1 {
   font-size: 26px;
   font-weight: 600;
-  justify-content: center;
+  text-align: center;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -49,6 +49,7 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Soft shadow at bottom */
     color: #74B843;
   font-size: 14px;
   font-weight: 400;
+  text-align: center;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -106,6 +107,12 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+h2.contact-info{
+  justify-content: center;
+  font-size: 24px;
+  color: #005b9f;
+  margin-bottom: 20px;
 }
 
 .contact-grid {
@@ -263,5 +270,155 @@ a:hover {
 
   nav.show {
     display: block;
+  }
+}
+
+/* about.html styling  */
+.mission-section {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  padding: 40px 10%;
+  background: #fff;
+  flex-wrap: wrap; /* allow wrapping for small screens */
+}
+
+.mission-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mission-icon {
+  height: 40px;
+}
+
+.mission-divider {
+  border: none;
+  border-top: 2px solid #74B843;
+  margin: 10px 0 20px 0;
+}
+
+.mission-intro {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.mission-text p {
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.lums-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.lums-image img {
+  width: 100%;
+  height: auto; /* let height adapt */
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  margin-top: 50px;
+  padding: 0 10%;
+}
+
+.why-choose-us h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  color: #005b9f;
+}
+
+.why-choose-us hr {
+  border: 1px solid #74B843;
+  margin-bottom: 30px;
+}
+
+.choose-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.choose-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.choose-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.choose-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.choose-item span {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .mission-section {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .mission-title {
+    font-size: 1.8rem;
+  }
+
+  .lums-image img {
+    width: 100%;
+  }
+
+  .choose-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-title {
+    font-size: 1.5rem;
+  }
+
+  .choose-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .choose-item img {
+    margin: 0 0 10px 0;
   }
 }
