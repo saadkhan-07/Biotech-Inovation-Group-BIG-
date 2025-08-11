@@ -446,7 +446,7 @@ a:hover {
 }
 
 .services-image img {
-    width: 45%;
+    width: 60%;
     max-width: 500px;
     height: auto;
     max-height: 400px;
@@ -470,6 +470,7 @@ a:hover {
 }
 
 .services-intro {
+  color: #005b9d;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
@@ -576,5 +577,86 @@ a:hover {
     .prev, .next {
         padding: 8px 12px;
         font-size: 1.2rem;
+    }
+}
+/* teams Page */
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+} 
+.team-title {
+    font-size: 3.0em;
+    font-weight: bold;
+    color: #005b9f;
+}
+.team-divider {
+    border: 1px solid #74B843;
+    margin: 10px auto 40px;
+    width: 80%;
+}
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.team-member {
+    flex: 1 1 calc(20% - 30px);
+    max-width: 250px;
+    text-align: center;
+}
+.team-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: -50px;
+    border: 5px solid white;
+    position: relative;
+    z-index: 1;
+}
+.team-info {
+    padding: 70px 15px 20px;
+    border-radius: 10px;
+    min-height: 300px;
+}
+.blue-bg {
+    background-color: #005b8e;
+    color: white;
+    height: 60%;
+}
+.green-bg {
+    background-color: #8cc63f;
+    color: white;
+    height: 60%;
+}
+.team-info a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .team-member {
+        flex: 1 1 calc(33.33% - 30px);
+    }
+}
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 30px);
+    }
+    .team-img {
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .team-img {
+        width: 150px;
+        height: 150px;
     }
 }
