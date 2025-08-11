@@ -9,9 +9,6 @@
 <body>
     <div id="header"></div>
 
-    <!-- Services Section -->
-    
-
     <!-- Slider Section -->
     <section class="services-slider-section">
         <h2 class="services-slider-title"><strong>Our Services</strong></h2>
@@ -25,15 +22,15 @@
             <button class="next">&#10095;</button>
         </div>
     </section>
+
+    <!-- Services Section (Wet Lab) -->
     <section class="services-section">
         <div class="services-column services-text">
             <h2 class="services-title">Wet lab Services</h2>
             <hr class="services-divider">
-
             <p class="services-intro">
                 To aid your drug discovery efforts, we offer the following cellular assays/experiments:
             </p>
-
             <ul class="services-list">
                 <li>Proliferation assays (SRB, MTT, MTS, ADP Glo etc.) for drug evaluation (Screening, IC50s etc.)</li>
                 <li>Apoptotic assays (Annexin PI staining, PARP and caspase 3/7 cleavage)</li>
@@ -50,16 +47,14 @@
         </div>
     </section>
 
-        <!-- New Services Section (In Silico) -->
+    <!-- Services Section (In Silico) -->
     <section class="services-section">
         <div class="services-column services-text">
             <h2 class="services-title">In Silico Services</h2>
             <hr class="services-divider">
-
             <p class="services-intro">
                 To support your computational drug discovery and analysis needs, we offer:
             </p>
-
             <ul class="services-list">
                 <li>Molecular docking studies</li>
                 <li>Virtual screening of compounds</li>
@@ -75,7 +70,6 @@
             <img src="images/insilico1.png" alt="In Silico Services">
         </div>
     </section>
-
 
     <div id="footer"></div>
 
@@ -97,20 +91,51 @@
             .then(res => res.text())
             .then(data => document.getElementById('footer').innerHTML = data);
 
-        // Slider functionality
-        const slides = document.querySelector('.slides');
+        // Slider functionality with auto-slide
+        const slidesContainer = document.querySelector('.slides');
         const slideImages = document.querySelectorAll('.slides img');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
         let index = 0;
+        let autoSlide;
 
-        document.querySelector('.next').addEventListener('click', () => {
+        function showSlide(i) {
+            slidesContainer.style.transform = `translateX(-${i * 100}%)`;
+        }
+
+        function nextSlide() {
             index = (index + 1) % slideImages.length;
-            slides.style.transform = `translateX(-${index * 100}%)`;
+            showSlide(index);
+        }
+
+        function prevSlideFunc() {
+            index = (index - 1 + slideImages.length) % slideImages.length;
+            showSlide(index);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 3000); // change slide every 3 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            startAutoSlide();
+        }
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
         });
 
-        document.querySelector('.prev').addEventListener('click', () => {
-            index = (index - 1 + slideImages.length) % slideImages.length;
-            slides.style.transform = `translateX(-${index * 100}%)`;
+        prevBtn.addEventListener('click', () => {
+            prevSlideFunc();
+            resetAutoSlide();
         });
+
+        // Init
+        showSlide(index);
+        startAutoSlide();
     </script>
 </body>
 </html>
