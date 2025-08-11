@@ -581,6 +581,7 @@ a:hover {
 }
 /* teams Page */
 .team-section {
+  margin-top: -70px;
     text-align: center;
     padding: 50px 20px;
 } 
@@ -659,4 +660,69 @@ a:hover {
         width: 150px;
         height: 150px;
     }
+}
+/* facilities page */
+/* CSS */
+.equipment-section {
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+.equipment-section h1 {
+  font-size: 2.0rem;
+  color: #005b9f;
+  font-weight: 900px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.divider {
+  margin: 10px 0 20px;
+  border: none;
+  height: 2px;
+  background: #74B843;
+}
+
+.equipment-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.equipment-card .icon img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.equipment-card h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.equipment-card ul {
+  padding-left: 20px;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 992px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .equipment-section h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
 }
