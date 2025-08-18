@@ -245,9 +245,12 @@ a:hover {
 }
 
 /* Hide menu on mobile */
+
 @media (max-width: 768px) {
   nav {
-    display: none;
+    max-height: 0;                 /* Start hidden */
+    overflow: hidden;              /* Hide content when collapsed */
+    transition: max-height 0.3s ease-in-out; /* Smooth slide effect */
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -273,9 +276,10 @@ a:hover {
   }
 
   nav.show {
-    display: block;
+    max-height: 500px; /* Enough height for all menu items */
   }
 }
+
 
 /* about.html styling  */
 .mission-section {
