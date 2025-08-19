@@ -5,70 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/header-footer.css">
     <link rel="stylesheet" href="CSS/servicesStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Services</title>
 </head>
 <body>
     <div id="header"></div>
 
-    <!-- Slider Section -->
-    <section class="services-slider-section">
-        <h2 class="services-slider-title"><strong>Our Services</strong></h2>
-        <div class="slider">
-            <div class="slides">
-                <img src="images/wetlab2.png" alt="Service 1">
-                <img src="images/insilico2.png" alt="Service 2">
-                <img src="images/insilico3.png" alt="Service 3">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Our <span>Innovative</span> Services</h1>
+            <p>Cutting-edge biotechnology solutions to accelerate your research and drug discovery</p>
         </div>
     </section>
 
     <!-- Services Section (Wet Lab) -->
-    <section class="services-section">
-        <div class="services-column services-text">
-            <h2 class="services-title">Wet lab Services</h2>
-            <hr class="services-divider">
-            <p class="services-intro">
-                To aid your drug discovery efforts, we offer the following cellular assays/experiments:
-            </p>
-            <ul class="services-list">
-                <li>Proliferation assays (SRB, MTT, MTS, ADP Glo etc.) for drug evaluation (Screening, IC50s etc.)</li>
-                <li>Apoptotic assays (Annexin PI staining, PARP and caspase 3/7 cleavage)</li>
-                <li>Degradation assays for PROTACs</li>
-                <li>Immunofluorescence</li>
-                <li>3D growth of spheroids and colony formation</li>
-                <li>Western blotting</li>
-                <li>Drug combination studies</li>
-                <li>Gene expression analysis through q-PCR</li>
-            </ul>
-        </div>
-        <div class="services-column services-wetlabimage">
-            <img src="images/wetlab.png" alt="Wet lab experiment">
+    <section class="services-section wet-lab">
+        <div class="services-container">
+            <div class="services-column services-text">
+                <div class="service-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h2 class="services-title">Wet Lab Services</h2>
+                <hr class="services-divider">
+                <p class="services-intro">
+                    Comprehensive cellular assays and experiments to support your drug discovery pipeline:
+                </p>
+                <ul class="services-list">
+                    <li><i class="fas fa-check-circle"></i> Proliferation assays (SRB, MTT, MTS, ADP Glo etc.) for drug evaluation</li>
+                    <li><i class="fas fa-check-circle"></i> Apoptotic assays (Annexin PI staining, PARP and caspase 3/7 cleavage)</li>
+                    <li><i class="fas fa-check-circle"></i> Degradation assays for PROTACs</li>
+                    <li><i class="fas fa-check-circle"></i> Immunofluorescence and Western blotting</li>
+                    <li><i class="fas fa-check-circle"></i> 3D growth of spheroids and colony formation</li>
+                    <li><i class="fas fa-check-circle"></i> Drug combination studies</li>
+                    <li><i class="fas fa-check-circle"></i> Gene expression analysis through q-PCR</li>
+                </ul>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="services-column services-image">
+                <img src="images/Services/wetlab.png" alt="Wet lab experiment" class="service-img">
+                <div class="image-overlay"></div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section (In Silico) -->
-    <section class="services-section">
-        <div class="services-column services-text">
-            <h2 class="services-title">In Silico Services</h2>
-            <hr class="services-divider">
-            <p class="services-intro">
-                To support your computational drug discovery and analysis needs, we offer:
-            </p>
-            <ul class="services-list">
-                <li>Molecular docking studies</li>
-                <li>Virtual screening of compounds</li>
-                <li>ADMET prediction</li>
-                <li>Protein-ligand interaction analysis</li>
-                <li>Homology modeling</li>
-                <li>Molecular dynamics simulations</li>
-                <li>Binding free energy calculations</li>
-                <li>Custom computational workflows</li>
-            </ul>
+    <section class="services-section in-silico">
+        <div class="services-container">
+            <div class="services-column services-image">
+                <img src="images/Services/insilico1.png" alt="In Silico Services" class="service-img">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="services-column services-text">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2 class="services-title">In Silico Services</h2>
+                <hr class="services-divider">
+                <p class="services-intro">
+                    Advanced computational solutions to enhance your drug discovery process:
+                </p>
+                <ul class="services-list">
+                    <li><i class="fas fa-check-circle"></i> Molecular docking studies and virtual screening</li>
+                    <li><i class="fas fa-check-circle"></i> ADMET prediction and protein-ligand interaction analysis</li>
+                    <li><i class="fas fa-check-circle"></i> Homology modeling and molecular dynamics simulations</li>
+                    <li><i class="fas fa-check-circle"></i> Binding free energy calculations</li>
+                    <li><i class="fas fa-check-circle"></i> Custom computational workflows</li>
+                    <li><i class="fas fa-check-circle"></i> Machine learning approaches for drug discovery</li>
+                    <li><i class="fas fa-check-circle"></i> Structural bioinformatics analysis</li>
+                </ul>
+                <button class="cta-button">Learn More</button>
+            </div>
         </div>
-        <div class="services-column services-inSilicoimage">
-            <img src="images/insilico1.png" alt="In Silico Services">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The wet lab services provided exceptional quality data that significantly accelerated our research timeline.</p>
+                    <div class="testimonial-author">
+                        <strong>Dr. Sarah Johnson</strong>
+                        <span>Lead Researcher, PharmaCorp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Their in silico analysis provided insights we hadn't considered, leading to a breakthrough in our project.</p>
+                    <div class="testimonial-author">
+                        <strong>Prof. Michael Chen</strong>
+                        <span>Director, BioTech Institute</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Accelerate Your Research?</h2>
+            <p>Contact us today to discuss how our services can support your specific needs</p>
+            <button class="cta-button" onclick="window.location.href='contactUs.html'">
+  Get in Touch
+</button>
+
         </div>
     </section>
 
@@ -91,52 +137,6 @@
         fetch('footer.html')
             .then(res => res.text())
             .then(data => document.getElementById('footer').innerHTML = data);
-
-        // Slider functionality with auto-slide
-        const slidesContainer = document.querySelector('.slides');
-        const slideImages = document.querySelectorAll('.slides img');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-
-        let index = 0;
-        let autoSlide;
-
-        function showSlide(i) {
-            slidesContainer.style.transform = `translateX(-${i * 100}%)`;
-        }
-
-        function nextSlide() {
-            index = (index + 1) % slideImages.length;
-            showSlide(index);
-        }
-
-        function prevSlideFunc() {
-            index = (index - 1 + slideImages.length) % slideImages.length;
-            showSlide(index);
-        }
-
-        function startAutoSlide() {
-            autoSlide = setInterval(nextSlide, 3000); // change slide every 3 seconds
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlide);
-            startAutoSlide();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoSlide();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevSlideFunc();
-            resetAutoSlide();
-        });
-
-        // Init
-        showSlide(index);
-        startAutoSlide();
     </script>
 </body>
 </html>
