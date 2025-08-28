@@ -5,105 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/header-footer.css">
     <link rel="stylesheet" href="CSS/aboutstyles.css">
+    <link rel="stylesheet" href="CSS/cta.css">
     <title>About Us</title>
 </head>
 <body>
-      <div id="header"></div>
-<section class="mission-section">
-  <!-- Left Text Column -->
-  <div class="mission-text">
-    <h2 class="mission-title">
-      Our Mission
-      <img src="images/logo.png" alt="DNA Icon" class="mission-icon">
-    </h2>
-    <hr class="mission-divider">
+    <div id="header"></div>
 
-    <p class="mission-intro" style="color: #74B843;">
-      <strong style=" color: #74B843;"><em>Biotech Innovation Group (BIG)</em></strong> is dedicated to pioneering
-      scientific research and driving innovation.
-    </p>
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <!-- Left Text Column -->
+        <div class="mission-text">
+            <h2 class="mission-title">
+                Our Mission
+                <img src="images/logo.png" alt="DNA Icon" class="mission-icon">
+            </h2>
+            <hr class="mission-divider">
 
-    <p>
-      The company's origin stems from a vision of resourcefulness, initially specializing
-      in cell-based assays and developing computational solutions to support biological
-      research and diagnostics, within and beyond the borders of Pakistan. Additionally,
-      BIG is broadening its focus to include the production of essential biological molecules,
-      notably proteins, to lower operational expenses.
-    </p>
+            <p class="mission-intro" style="color: #74B843;">
+                <strong style=" color: #74B843;"><em>Biotech Innovation Group (BIG)</em></strong> is dedicated to pioneering
+                scientific research and driving innovation.
+            </p>
 
-    <p>
-      BIG aims to reflect its evolving expertise by fostering a culture of efficiency,
-      innovation, and sustainability.
-    </p>
-  </div>
+            <p>
+                The company's origin stems from a vision of resourcefulness, initially specializing
+                in cell-based assays and developing computational solutions to support biological
+                research and diagnostics, within and beyond the borders of Pakistan. Additionally,
+                BIG is broadening its focus to include the production of essential biological molecules,
+                notably proteins, to lower operational expenses.
+            </p>
 
-  <!-- Right Image Column -->
-  <div class="lums-image">
-    <img src="images/LumsImages/lums-SSE.jpg" alt="LUMS Building">
-  </div>
-</section>
-
-<section class="why-choose-us">
-    <h2>Why Choose Us?</h2>
-    <hr class="why-choose-divider">
-
-    <div class="choose-container">
-        <div class="choose-column">
-            <div class="choose-item">
-                <img src="images/whyCooseUs/team.png" alt="Experienced Team">
-                <span>Experienced team with diverse expertise</span>
-            </div>
-            <div class="choose-item">
-                <img src="images/whyCooseUs/cost.png" alt="Cost-effectiveness">
-                <span>Cost-effectiveness</span>
-            </div>
-            <div class="choose-item">
-                <img src="images/whyCooseUs/time.png" alt="Agility and Flexibility">
-                <span>Agility and Flexibility</span>
-            </div>
+            <p>
+                BIG aims to reflect its evolving expertise by fostering a culture of efficiency,
+                innovation, and sustainability.
+            </p>
         </div>
 
-        <div class="choose-column">
-            <div class="choose-item">
-                <img src="images/whyCooseUs/Quality.png" alt="Quality Data">
-                <span>Quality data and results</span>
+        <!-- Right Image Column -->
+        <div class="lums-image">
+            <img src="images/LumsImages/lums-SSE.jpg" alt="LUMS Building">
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <hr class="why-choose-divider">
+
+        <div class="choose-container">
+            <div class="choose-column">
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/team.png" alt="Experienced Team">
+                    <span>Experienced team with diverse expertise</span>
+                </div>
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/cost.png" alt="Cost-effectiveness">
+                    <span>Cost-effectiveness</span>
+                </div>
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/time.png" alt="Agility and Flexibility">
+                    <span>Agility and Flexibility</span>
+                </div>
             </div>
-            <div class="choose-item">
-                <img src="images/whyCooseUs/communication.png" alt="Communication">
-                <span>Excellent communication & customer service</span>
-            </div>
-            <div class="choose-item">
-                <img src="images/whyCooseUs/environment.png" alt="Commitment">
-                <span>Commitment to environmental & social responsibility</span>
+
+            <div class="choose-column">
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/Quality.png" alt="Quality Data">
+                    <span>Quality data and results</span>
+                </div>
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/communication.png" alt="Communication">
+                    <span>Excellent communication & customer service</span>
+                </div>
+                <div class="choose-item">
+                    <img src="images/whyCooseUs/environment.png" alt="Commitment">
+                    <span>Commitment to environmental & social responsibility</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Call To Action Section -->
+    <section class="cta-section">
+        <h2>Ready to Innovate with Us?</h2>
+        <p>Join hands with our experts to create groundbreaking biotech solutions.</p>
+        <a href="contact.html" class="cta-btn">Get in Touch</a>
+    </section>
 
-      
-      <div id="footer"></div>
- <script>
-  // Load header and then attach event listeners
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-
-      // Attach hamburger toggle after header is inserted
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
-
-      hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-      });
-    });
-
-  // Load footer
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
-</script>
+    <script>
+        // Load header and attach hamburger toggle
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-menu');
+                hamburger.addEventListener('click', function () {
+                    navMenu.classList.toggle('show');
+                });
+            });
+    </script>
+          <p class="copytag">&copy; 2025 Biotech Innovation Group. All rights reserved.</p>
 
 </body>
 </html>

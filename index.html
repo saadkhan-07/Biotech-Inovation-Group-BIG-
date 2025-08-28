@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biotech Innovation Group</title>
   <link rel="stylesheet" href="CSS/header-footer.css" />
-  
+  <link rel="stylesheet" href="CSS/homepage.css" />
 </head>
 <body>
+  <!-- Header -->
   <div id="header"></div>
-  <section class="hero">
-    
-    <section class="hero">
-      <img src="images/homepage.png" alt="Biotech Innovation Group" class="hero-image" />
-    </section>
-    
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h1>Innovating the Future of Biotechnology</h1>
+      <p>We empower students and researchers to unlock new possibilities in biotech innovation.</p>
+      <a href="services.html" class="btn-primary">Explore Our Services</a>
+    </div>
+    <img src="images/homepage.png" alt="Biotech Innovation Group" class="hero-image" />
   </section>
-<div id="footer"></div>
- <script>
-  // Load header and then attach event listeners
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
 
-      // Attach hamburger toggle after header is inserted
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
+  <!-- Sneak Peek of Services -->
+  <section class="services-preview fade-in">
+    <h2 style="color: #005b9f ;font-size:40px">Our Core Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 style="color:#005b9f">Wet Lab Services</h3>
+        <p>Comprehensive experimental solutions designed to meet your research needs.</p>
+        <a href="services.html#wetlab" class="btn-secondary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <h3 style="color:#005b9f">In-Silico Analysis</h3>
+        <p>Advanced computational techniques to accelerate biotech discoveries.</p>
+        <a href="services.html#insilico" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-      hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
+  <!-- Team Expertise -->
+  <section class="team fade-in">
+    <h2>Our Team Expertise</h2>
+    <p class="team-description">
+      Our team consists of highly skilled professionals with extensive expertise in wet lab experimentation,
+      bioinformatics, computational modeling, and advanced in-silico techniques. Together, we deliver innovative
+      solutions to complex biotech challenges, ensuring accuracy, reliability, and impactful results.
+    </p>
+  </section>
+
+  <!-- Call to Action (Replaces Footer) -->
+  <section class="cta fade-in">
+    <h2>Ready to Begin Your Biotech Journey?</h2>
+    <p>Explore our services or reach out to our experts for guidance.</p>
+    <a href="contactUs.html" class="btn-primary">Contact Us</a>
+  </section>
+
+  <script>
+    // Reveal sections on scroll
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const revealOnScroll = () => {
+  fadeElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        // Attach hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', function () {
+          navMenu.classList.toggle('show');
+        });
       });
-    });
-
-  // Load footer
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
-    
-</script>
+  </script>
+    <p class="copytag">&copy; 2025 Biotech Innovation Group. All rights reserved.</p>
 
 </body>
 </html>
